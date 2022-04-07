@@ -72,9 +72,10 @@ input[type="radio"]:checked + label {
   top: -20px;
   width: 40px;
   height: 40px;
-  background: #cfc;
-  border: 1px solid #0c0;
+  background: #3c3;
   border-radius: 20px;
+  box-shadow: 0 0 2px #3c3;
+  color: white;
   font-size: 40px;
   font-weight: 1000;
   text-align: center;
@@ -100,11 +101,24 @@ input[type="radio"]:checked + label {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #888;
+  font-size: 75%;
 }
 
 .row {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.comment {
+  display: block;
+  flex-basis: 100%;
+  font-style: italic;
+}
+
+.comment::before {
+  font-style: normal;
+  content: "\BB ";
 }
 
 .sess-head, .row:nth-child(odd) {
