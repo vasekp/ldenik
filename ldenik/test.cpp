@@ -2,8 +2,8 @@
 #include "ids.h"
 
 int main() {
-  bool res = true;
+  int succ = 0;
   for(int i = 0; i < 100000; i++)
-    res &= check(generate());
-  std::cout << (int)res << '\n';
+    succ += check(generate()) ? 1 : 0;
+  std::cout << (int)succ << '\n';
 }
